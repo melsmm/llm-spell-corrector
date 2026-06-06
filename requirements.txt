@@ -1,0 +1,11 @@
+matplotlib==3.9.0
+nerus==1.7.0
+nest_asyncio==1.6.0
+numpy==1.26.4
+openai==2.30.0
+pandas==3.0.1
+python-dotenv==1.2.2
+sage_spelling==1.2.0
+torch==2.8.0
+tqdm==4.67.3
+vkbottle==4.9.0
