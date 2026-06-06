@@ -14,7 +14,9 @@ def _require(key: str) -> str:
     """Получает обязательную переменную окружения или падает с понятной ошибкой."""
     value = os.environ.get(key)
     if not value:
-        raise EnvironmentError(f"Переменная окружения '{key}' не задана. Проверьте .env файл.")
+        raise EnvironmentError(
+            f"Переменная окружения '{key}' не задана. Проверьте .env файл."
+        )
     return value
 
 
@@ -30,8 +32,7 @@ SPELL_TOP_P: float = 0.7
 
 # Промпт
 SPELL_PROMPT_TEMPLATE: str = (
-    "Исходный текст:\n{text}\n\n"
-    "Отредактируй исходный текст, исправив ошибки."
+    "Исходный текст:\n{text}\n\nОтредактируй исходный текст, исправив ошибки."
 )
 
 # Сообщения бота
@@ -46,7 +47,12 @@ MSG_PROCESSING_ERROR: str = (
 
 # Команды, на которые бот показывает приветствие
 GREETING_TRIGGERS: list[str] = [
-    "start", "/start",
-    "начать", "меню", "привет"
-    "помощь", "help", "/help",
+    "start",
+    "/start",
+    "начать",
+    "меню",
+    "привет",
+    "помощь",
+    "help",
+    "/help",
 ]
