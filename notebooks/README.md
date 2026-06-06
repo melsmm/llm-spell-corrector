@@ -14,13 +14,13 @@
 | Готовые пары | russian_gec_dataset | — | ~25 000 |
 | Готовые пары | RUSpellRU | — | ~2 000 |
 | Готовые пары | MultidomainGold | — | ~3 569 |
-| Чистые (без изменений) | gazeta / wikipedia / nerus | identity | ~50 000 |
-| SBSC (статистическая порча) | nerus | SBSCCorruptor | ~200 000 |
-| CharAug | nerus / wikipedia | CharAugCorruptor | ~150 000 |
-| WordAug | nerus / gazeta | WordAugCorruptor | ~100 000 |
+| Чистые (без изменений) | nerus / wikipedia / gazeta | identity | ~50 000 |
+| SBSC (статистическая порча) | nerus / wikipedia / gazeta | SBSCCorruptor | ~200 000 |
+| CharAug | nerus / wikipedia / gazeta | CharAugCorruptor | ~150 000 |
+| WordAug | nerus / wikipedia / gazeta | WordAugCorruptor | ~100 000 |
 | Punctuation corruption | nerus / wikipedia / gazeta | custom | ~150 000 |
-| Lowercase | nerus / gazeta | lowercase | ~100 000 |
-| Mixed (2–3 алгоритма) | nerus | multi-corrupt | ~219 431 |
+| Lowercase | nerus / wikipedia / gazeta | lowercase | ~100 000 |
+| Mixed (2–3 алгоритма) | nerus / wikipedia / gazeta | multi-corrupt | ~219 431 |
 | **ИТОГО** | | | **~1 000 000** |
 
 Собственный алгоритм **`corrupt_punctuation`** удаляет знаки препинания (по отдельности или все сразу) и вставляет лишние — для обучения модели восстановлению пунктуации. Добавление «чистых» примеров без изменений учит модель не «переисправлять» корректный текст.
